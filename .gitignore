@@ -1,0 +1,19 @@
+# Arquivos sensíveis
+.env
+files/senha
+files/contatos.json
+files/memoria.json
+
+# Áudio temporário
+*.mp3
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Arquivo de teste
+funcoes_voz.py
