@@ -44,7 +44,7 @@ switch_tema = ctk.CTkSwitch(
 )
 switch_tema.place(relx=0.5, rely=0.5, anchor="center")
 
-# círculo
+
 tamanho = 160 # tamanho do circulo
 circulo = ctk.CTkFrame(
     janela,
@@ -55,7 +55,7 @@ circulo = ctk.CTkFrame(
 )
 circulo.place(relx=0.5, rely=0.35, anchor="center")
 
-# ícone dentro do círculo
+
 image = ctk.CTkImage(
     light_image=Image.open("images/image.png"),
     size=(80,80)

@@ -24,4 +24,3 @@ def cotacao_moeda(moeda):
         mensagem = f'Cotação do {nome} consultada em {data_consulta}, último valor registrado: {valor} reais'
     return mensagem
     
-# print(cotacao_moeda("Dólar"))

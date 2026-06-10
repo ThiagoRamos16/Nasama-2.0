@@ -87,7 +87,7 @@ def executa_comandos(acao):
         interface.janela.after(0, interface.janela.destroy)
         sys.exit()
 
-    # ✅ HORAS — aceita variações
+    
     elif any(palavra in acao for palavra in ['hora', 'horas', 'que horas', 'horário', 'horario']):
         hora = funcoes_so.verifica_hora()
         interface.atualiza_status("falando")
@@ -97,7 +97,7 @@ def executa_comandos(acao):
         interface.para_animacao()
         interface.atualiza_status("ouvindo")
 
-    # ✅ EMAIL — aceita variações
+    
     elif any(palavra in acao for palavra in ['enviar email', 'enviar e-mail', 'mandar email', 'mandar e-mail', 'email', 'e-mail']):
         interface.atualiza_status("ouvindo")
         status_email = funcoes_email.enviar_email(cria_audio, monitora_audio)
@@ -108,7 +108,7 @@ def executa_comandos(acao):
         interface.para_animacao()
         interface.atualiza_status("ouvindo")
 
-    # ✅ DESLIGAR — aceita variações
+    
     elif any(palavra in acao for palavra in ['desligar', 'desliga']) and any(palavra in acao for palavra in ['uma hora', '1 hora', 'sessenta minutos']):
         interface.atualiza_status("falando")
         interface.inicia_animacao()
@@ -127,7 +127,7 @@ def executa_comandos(acao):
         interface.para_animacao()
         interface.atualiza_status("ouvindo")
 
-    # ✅ CANCELAR DESLIGAMENTO
+    
     elif any(palavra in acao for palavra in ['cancelar desligamento', 'cancela desligamento', 'não desligar', 'cancela']):
         interface.atualiza_status("falando")
         interface.inicia_animacao()
@@ -137,7 +137,7 @@ def executa_comandos(acao):
         interface.para_animacao()
         interface.atualiza_status("ouvindo")
 
-    # ✅ COTAÇÕES — aceita variações
+    
     elif any(palavra in acao for palavra in ['dólar', 'dolar', 'dollar', 'cotação do dólar', 'quanto está o dólar']):
         interface.atualiza_status("falando")
         interface.inicia_animacao()
@@ -165,7 +165,7 @@ def executa_comandos(acao):
         interface.para_animacao()
         interface.atualiza_status("ouvindo")
 
-    # ✅ NOTÍCIAS — aceita variações
+    
     elif any(palavra in acao for palavra in ['notícia', 'noticia', 'notícias', 'noticias', 'novidade', 'novidades']):
         interface.atualiza_status("falando")
         interface.inicia_animacao()
@@ -198,7 +198,7 @@ def executa_comandos(acao):
         interface.para_animacao()
         interface.atualiza_status("ouvindo")
 
-    # ✅ CLIMA — aceita variações
+    
     elif any(palavra in acao for palavra in ['clima', 'temperatura', 'tempo', 'previsão', 'previsao', 'faz calor', 'está frio']):
         while True:
             interface.atualiza_status("falando")
@@ -221,7 +221,7 @@ def executa_comandos(acao):
             if 'Não encontrei' not in resultado and 'Não consegui' not in resultado:
                 break
 
-    # ✅ IA RESPONDE TUDO QUE NÃO FOI RECONHECIDO
+    
     else:
         resposta = funcoes_groq.responde_ia(acao)
         interface.atualiza_status("falando")
